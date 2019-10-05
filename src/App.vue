@@ -2,9 +2,13 @@
   <div @scroll="handleScroll" id="app">
     <nav class="navbar-fixed-top navbar navbar-fixed-top navbar-expand-lg navbar-light bg-light">
       <div class="col-sm-3 nav-img">
-        <transition name="custom-classes-transition" leave-active-class="animated bounceOutRight">
+        <!-- <transition
+          name="custom-classes-transition"
+          @after-leave="hasLeft"
+          leave-active-class="animated bounceOutRight"
+        >
           <img v-if="this.scrolled==false" src="./assets/cadenlawrencefinalcl.png" alt />
-        </transition>
+        </transition>-->
       </div>
       <button
         class="navbar-toggler"
@@ -18,11 +22,18 @@
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="col-sm-3 middle">
-        <transition name="custom-classes-transition" enter-active-class="animated-quick fadeInUp">
-          <a class="navbar-brand" v-if="this.scrolled==true" href="#">
-            <img src="./assets/cadenlawrencefinal.png" alt />
-          </a>
-        </transition>
+        <div class="middle-imgs navbar-brand">
+          <transition name="custom-classes-transition" enter-active-class="animated-quick fadeInUp">
+            <a v-if="this.scrolled==true" href="#">
+              <img style="width:30px;" src="./assets/cadenlawrencefinalcl.png" alt />
+            </a>
+          </transition>
+          <transition name="custom-classes-transition" enter-active-class="animated-quick fadeInUp">
+            <a href="#" v-if="this.scrolled==true">
+              <img src="./assets/cadenlawrencecropped.png" alt />
+            </a>
+          </transition>
+        </div>
       </div>
       <div class="col-sm-3 collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav ml-auto">
@@ -69,15 +80,23 @@ export default {
   },
   data() {
     return {
-      scrolled: false
+      scrolled: false,
+      hasLeft: false
     };
   },
   methods: {
     handleScroll() {
-      if (window.scrollY > 0) {
+      if (window.scrollY > 40) {
         return (this.scrolled = true);
       } else {
         return (this.scrolled = false);
+      }
+    },
+    hasLeft() {
+      if (this.scrolled) {
+        return true;
+      } else {
+        return false;
       }
     }
   },
@@ -94,7 +113,11 @@ export default {
 $width: 100%;
 .middle img {
   height: auto;
+  width: 90%;
+}
+.middle-imgs {
   width: 100%;
+  height: auto;
   float: right;
 }
 .animated {
@@ -108,6 +131,8 @@ $width: 100%;
   animation-duration: 0.25s;
   -webkit-animation-fill-mode: both;
   animation-fill-mode: both;
+  transition-delay: 2s;
+  -webkit-transition-delay: 2s;
 }
 @-webkit-keyframes bounceOutRight {
   20% {
@@ -117,7 +142,7 @@ $width: 100%;
   }
 
   to {
-    opacity: 0;
+    opacity: 1;
     -webkit-transform: translate3d(700px, 0, 0);
     transform: translate3d(700px, 0, 0);
   }
@@ -131,7 +156,7 @@ $width: 100%;
   }
 
   to {
-    opacity: 0;
+    opacity: 1;
     -webkit-transform: translate3d(700px, 0, 0);
     transform: translate3d(700px, 0, 0);
   }
