@@ -1,120 +1,113 @@
 <template>
-  <div class="projects" id="projects">
+  <div class="projects view-height white-background" id="projects">
     <section>
       <div class="container">
-          <div class="title">
-              <h3>Projects</h3>
-          </div>
-        <div class="row">
-            <div class="img-container col-md-4 col-sm-12">
-                <div class="content">
-                <a href="https://research.uc.edu/researchweek" target="_blank">
-                    <div class="content-overlay"></div>
-                    <img class="content-image" src="../assets/researchweek.png">
-                    <div class="content-details fadeIn-bottom">
-                    <h3 class="content-title">R&I Week 2019</h3>
-                    <p class="content-text">
-                        Developer for UC's Research and Innovation Week 2019.
-                        <br>Languages: Html, Jquery, and CSS
-                    </p>
-                    </div>
-                </a>
-                </div>
-            </div>
-            <div class="img-container col-md-4 col-sm-12">
-                <div class="content">
-                <a href="https://researchhow2.uc.edu/" target="_blank">
-                    <div class="content-overlay"></div>
-                    <img class="content-image" src="../assets/rh2.png">
-                    <div class="content-details fadeIn-bottom">
-                    <h3 class="content-title">Research How 2</h3>
-                    <p class="content-text">
-                        Developed as a easily searchable database that holds all the Office of Research's documents.
-                        <br>Languages: Html, Jquery, and CSS
-                    </p>
-                    </div>
-                </a>
-                </div>
-            </div>
-            <div class="img-container col-md-4 col-sm-12">
-                <div class="content">
-                <a href="http://rsrch-webserver.uc.edu/" target="_blank">
-                    <div class="content-overlay"></div>
-                    <img class="content-image" src="../assets/limitedsub.png">
-                    <div class="content-details fadeIn-bottom">
-                    <h3 class="content-title">Limited Submission</h3>
-                    <p class="content-text">
-                        Created because of a need for a more efficient way to track and get in contact with researchers interested in funding.
-                        <br>Languages: Angular, Redis, Mocha, and Jasmine
-                    </p>
-                    </div>
-                </a>
-                </div>
-            </div>
+        <div class="title">
+          <h3>Projects</h3>
         </div>
         <div class="row">
           <div class="img-container col-md-4 col-sm-12">
-                <div class="content">
-                    <a href="https://research.uc.edu" target="_blank">
-                    <div class="content-overlay"></div>
-                    <img class="content-image" src="../assets/cyber.png">
-                    <div class="content-details fadeIn-bottom">
-                        <h3 class="content-title">UC's Research Website</h3>
-                        <p class="content-text">
-                        UC's Front-end Research Website.
-                        <br>Languages: Html, CSS, and Jquery
-                        </p>
-                    </div>
-                    </a>
+            <div class="content">
+              <a href="https://research.uc.edu/researchweek" target="_blank">
+                <div class="content-overlay"></div>
+                <img class="content-image" src="../assets/researchweek.png" />
+                <div class="content-details fadeIn-bottom">
+                  <h3 class="content-title">R&I Week 2019</h3>
+                  <p class="content-text">
+                    Developer for UC's Research and Innovation Week 2019.
+                    <br />Languages: Html, Jquery, and CSS
+                  </p>
                 </div>
-                </div>
-            <div class="img-container col-md-4 col-sm-12">
-                <div class="content">
-                    <a href="#" target="_blank">
-                    <div class="content-overlay"></div>
-                    <img
-                        class="content-image"
-                        src="../assets/newwebsite.png"
-                    >
-                    <div class="content-details fadeIn-bottom">
-                        <h3 class="content-title">Current Portfolio Website</h3>
-                        <p class="content-text">
-                        The current version of my portfolio. An excuse to use a new language.
-                        <br>Languages: Vue.js and Firebase
-                        </p>
-                    </div>
-                    </a>
-                </div>
+              </a>
             </div>
-            <div class="img-container col-md-4 col-sm-12">
-                <div class="content">
-                    <a href="https://cadenlawrence.com" target="_blank">
-                    <div class="content-overlay"></div>
-                    <img class="content-image" src="../assets/oldwebsite.png">
-                    <div class="content-details fadeIn-bottom">
-                        <h3 class="content-title">Old Portfolio Website</h3>
-                        <p class="content-text">
-                        My very first try as a developer. Created authentication, as well as a contact database.
-                        <br>Languages: React and Firebase
-                        </p>
-                    </div>
-                    </a>
+          </div>
+          <div class="img-container col-md-4 col-sm-12">
+            <div class="content">
+              <a href="https://researchhow2.uc.edu/" target="_blank">
+                <div class="content-overlay"></div>
+                <img class="content-image" src="../assets/rh2.png" />
+                <div class="content-details fadeIn-bottom">
+                  <h3 class="content-title">Research How 2</h3>
+                  <p class="content-text">
+                    Developed as a easily searchable database that holds all the Office of Research's documents.
+                    <br />Languages: Html, Jquery, and CSS
+                  </p>
                 </div>
+              </a>
             </div>
-            
+          </div>
+          <div class="img-container col-md-4 col-sm-12">
+            <div class="content">
+              <a href="http://rsrch-webserver.uc.edu/" target="_blank">
+                <div class="content-overlay"></div>
+                <img class="content-image" src="../assets/limitedsub.png" />
+                <div class="content-details fadeIn-bottom">
+                  <h3 class="content-title">Limited Submission</h3>
+                  <p class="content-text">
+                    Created because of a need for a more efficient way to track and get in contact with researchers interested in funding.
+                    <br />Languages: Angular, Redis, Mocha, and Jasmine
+                  </p>
+                </div>
+              </a>
             </div>
+          </div>
         </div>
+        <div class="row">
+          <div class="img-container col-md-4 col-sm-12">
+            <div class="content">
+              <a href="https://research.uc.edu" target="_blank">
+                <div class="content-overlay"></div>
+                <img class="content-image" src="../assets/cyber.png" />
+                <div class="content-details fadeIn-bottom">
+                  <h3 class="content-title">UC's Research Website</h3>
+                  <p class="content-text">
+                    UC's Front-end Research Website.
+                    <br />Languages: Html, CSS, and Jquery
+                  </p>
+                </div>
+              </a>
+            </div>
+          </div>
+          <div class="img-container col-md-4 col-sm-12">
+            <div class="content">
+              <a href="#" target="_blank">
+                <div class="content-overlay"></div>
+                <img class="content-image" src="../assets/newwebsite.png" />
+                <div class="content-details fadeIn-bottom">
+                  <h3 class="content-title">Current Portfolio Website</h3>
+                  <p class="content-text">
+                    The current version of my portfolio. An excuse to use a new language.
+                    <br />Languages: Vue.js and Firebase
+                  </p>
+                </div>
+              </a>
+            </div>
+          </div>
+          <div class="img-container col-md-4 col-sm-12">
+            <div class="content">
+              <a href="https://cadenlawrence.com" target="_blank">
+                <div class="content-overlay"></div>
+                <img class="content-image" src="../assets/oldwebsite.png" />
+                <div class="content-details fadeIn-bottom">
+                  <h3 class="content-title">Old Portfolio Website</h3>
+                  <p class="content-text">
+                    My very first try as a developer. Created authentication, as well as a contact database.
+                    <br />Languages: React and Firebase
+                  </p>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
   </div>
 </template>
 <script>
-
 export default {
-  name: 'Projects',
-  components: {
-
-  }
-}
+  name: "Projects",
+  components: {}
+};
 </script>
 <style scoped>
 .main-title {
@@ -127,7 +120,6 @@ export default {
   padding: 1em 0;
   float: left;
 }
-
 
 .img-container .title {
   color: #1a1a1a;
@@ -165,7 +157,6 @@ export default {
 
 .content-image {
   width: 100%;
-   
 }
 
 .content-details {
