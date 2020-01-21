@@ -17,7 +17,7 @@
           </div>
         </div>
         <div class="description">
-          <p>I am currently a Student Developer for the University of Cincinnati's Office of Research. I am working towards my Bachelor of Science in the College of Engineering and Applied Science, majoring in Computer Science. I also plan to minor in the Information Technology department, specifically focusing on cyber security. I currently develop during my day job, and practice penetrating systems at night!</p>
+          <p>I am currently a Student Software Developer for the University of Cincinnati's Office of Research. I am working towards my Bachelor of Science in the College of Engineering and Applied Science, majoring in Computer Science. I also plan to minor in the Information Technology department, specifically focusing on cyber security. I currently develop during my day job, and practice penetrating systems at night!</p>
         </div>
       </div>
     </section>

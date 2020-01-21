@@ -203,7 +203,9 @@ export default {
   color: #fff;
   font-size: 0.8em;
 }
-
+section{
+  background-color: #BFBEBE;
+}
 .fadeIn-bottom {
   top: 80%;
 }

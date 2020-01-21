@@ -44,10 +44,10 @@
             </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#experience">Experience</a>
+            <a class="nav-link" href="#projects">Projects</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#projects">Projects</a>
+            <a class="nav-link" href="#experience">Experience</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="#contact">Contact</a>
@@ -57,8 +57,8 @@
     </nav>
     <div class="main">
       <About></About>
-      <Experience></Experience>
       <Project></Project>
+      <Experience></Experience>
       <Contact></Contact>
     </div>
   </div>

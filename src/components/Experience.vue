@@ -11,11 +11,16 @@
               <h3><span style="font-style: italic;">Student Developer</span> <span style="float:right;">May 2017-Present</span><br/>University of Cincinnati Office of Research IT</h3>
               <div class="content">
               <ul>
-                <li>- Created front-end applications on multiple projects using Angular, JQuery, or Handlebars</li>
-                <li>- Design and implemented back-end caching service with Redis</li>
-                <li>- Added widget templates utilizing the Sitefinity CMS, as well as the .NET framework</li>
-                <li>- Assisted with tech support to over 100+ users<br/></li>
-                <li>- Actualized an interface to a MySQL database using Microsoft Access</li>
+                <li>Created front-end applications on multiple projects using Angular, Vue, JQuery, and Handlebars</li>
+                <li>Design and implemented back-end caching service with Redis</li>
+                <li>Added widget templates utilizing the Sitefinity CMS, as well as the .NET framework</li>
+                <li>Actualized an interface to a MySQL database using Microsoft Access</li>
+                <li>Managed encryption/policies created in Mcafee ePolicy Orchestrator</li>
+                <li>Designed and implemented Authentication using Azure AD and OAUTH</li>
+                <li>Assisted with tech support to over 100+ users</li>
+                <li>Aided in the mitigation of several security risks in Office of Research applications</li>
+                <li>Provided insight on security technologies to help secure different areas of the Office of Research</li>
+
               </ul>
               </div>
             </div>
@@ -25,11 +30,11 @@
               <h3><span style="font-style: italic;">Construction Laborer</span> <span style="float:right;">2014-2016</span><br/>Professional Coatings and Weatherization</h3>
               <div class="content">
               <ul>
-                <li>- Lead or assisted on large commercial weatherization and painting projects</li>
-                <li>- Worked on government jobs to supply better living environments and bill reduction</li>
-                <li>- Communicated with clients to insure customer loyalty and satisfaction</li>
-                <li>- Organized paperwork and supplies for the business</li>
-                <li>- Motivated team serving as a positive team member during long shifts</li>
+                <li>Lead or assisted on large commercial weatherization and painting projects</li>
+                <li>Worked on government jobs to supply better living environments and bill reduction</li>
+                <li>Communicated with clients to insure customer loyalty and satisfaction</li>
+                <li>Organized paperwork and supplies for the business</li>
+                <li>Motivated team serving as a positive team member during long shifts</li>
               </ul>
               </div>
             </div>
@@ -66,10 +71,11 @@ ul{
 li{
   width: 100%;
 }
-section{
-  background-color: #BFBEBE;
+.box-wrapper{
+  width: 100%;
 }
 .box-wrapper .display-box {
+    width: 90%;
     text-align: left;
     background-color: white;
     box-shadow: 1px 1px 2px 0px rgba(0, 0, 0, 0.5);
