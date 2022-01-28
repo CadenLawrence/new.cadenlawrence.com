@@ -6,7 +6,7 @@
               <h3>Projects</h3>
           </div>
         <div class="row">
-            <div class="img-container col-md-4 col-sm-12">
+            <div class="img-container col-md-6 col-sm-12">
                 <div class="content">
                 <a href="https://research.uc.edu/researchweek" target="_blank">
                     <div class="content-overlay"></div>
@@ -21,7 +21,7 @@
                 </a>
                 </div>
             </div>
-            <div class="img-container col-md-4 col-sm-12">
+            <div class="img-container col-md-6 col-sm-12">
                 <div class="content">
                 <a href="https://researchhow2.uc.edu/" target="_blank">
                     <div class="content-overlay"></div>
@@ -36,7 +36,7 @@
                 </a>
                 </div>
             </div>
-            <div class="img-container col-md-4 col-sm-12">
+            <!--<div class="img-container col-md-4 col-sm-12">
                 <div class="content">
                 <a href="http://rsrch-webserver.uc.edu/" target="_blank">
                     <div class="content-overlay"></div>
@@ -50,10 +50,10 @@
                     </div>
                 </a>
                 </div>
-            </div>
+            </div>-->
         </div>
         <div class="row">
-          <div class="img-container col-md-4 col-sm-12">
+          <div class="img-container col-md-6 col-sm-12">
                 <div class="content">
                     <a href="https://research.uc.edu" target="_blank">
                     <div class="content-overlay"></div>
@@ -68,7 +68,7 @@
                     </a>
                 </div>
                 </div>
-            <div class="img-container col-md-4 col-sm-12">
+            <!--<div class="img-container col-md-4 col-sm-12">
                 <div class="content">
                     <a href="#" target="_blank">
                     <div class="content-overlay"></div>
@@ -85,8 +85,8 @@
                     </div>
                     </a>
                 </div>
-            </div>
-            <div class="img-container col-md-4 col-sm-12">
+            </div>-->
+            <div class="img-container col-md-6 col-sm-12">
                 <div class="content">
                     <a href="https://cadenlawrence.com" target="_blank">
                     <div class="content-overlay"></div>
@@ -138,7 +138,7 @@ export default {
 .content {
   position: relative;
   width: 90%;
-  max-width: 400px;
+  max-width: 500px;
   margin: auto;
   overflow: hidden;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);

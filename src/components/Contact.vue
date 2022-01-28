@@ -6,27 +6,28 @@
 					<h3>Contact Me</h3>
 				</div>
 				<div class="row">
-					<form>
-						<div class="field name-box">
-						<input type="text" id="name" placeholder="Who Are You?"/>
-						<label for="name">NAME</label>
-						<span class="ss-icon">check</span>
-						</div>
+					<div class="contactForm">
+						<form @submit.prevent="sendEmail">
+							<div class="inputGroup inputGroup1">
+							<input v-model="firstname" class="inputGroup__textfield" type="text" name="" value="" placeholder="Firstname*" required data-value-missing="Please fill out this field.">
+							</div>
 
-						<div class="field email-box">
-						<input type="text" id="email" placeholder="name@email.com"/>
-						<label for="email">EMAIL</label>
-						<span class="ss-icon">check</span>
-						</div>
+							<div class="inputGroup inputGroup2">
+							<input v-model="Lastname" class="inputGroup__textfield" type="text" name="" value="" placeholder="Lastname*" required data-value-missing="Please fill out this field.">
+							</div>
+							<div class="inputGroup inputGroup5">
+          						<input v-model="email" class="inputGroup__textfield" type="text" name="" value="" placeholder="Email">
+        					</div>
+							<div class="inputGroup inputGroup6">
+							<textarea v-model="message" class="inputGroup__textfield" name="name" rows="8" placeholder="Message?*" required data-value-missing="Please fill out this field."></textarea>
+							</div>
 
-						<div class="field msg-box">
-						<textarea id="msg" rows="4" placeholder="Your message goes here..."/>
-						<label for="msg">MESSAGE</label>
-						<span class="ss-icon">check</span>
-						</div>
+							<div class="inputGroup inputGroup7">
+							<button type="submit" name="button">Send</button>
+							</div>
+						</form>
+					</div> 
 
-						<input class="button" type="submit" value="Send" />
-					</form>
 				</div>
 			</div>
 		</section>
@@ -38,117 +39,159 @@ export default {
   name: 'Contact',
   components: {
 
+  },
+  methods: {
+	  sendEmail(e) {
+      try {
+        emailjs.sendForm('service_tcmtfp8', 'fa8a9b1d978c01fbf1bc3c0d02315745', e.target,
+        'user_MFNFMQbfDfV7JrkkSXYNV', {
+          firstname: this.firstname,
+		  lastname: this.lastname,
+          email: this.email,
+          message: this.message
+        });
+
+      } 
+	  catch(error) {
+        console.log({error})
+      }
+      // Reset form field
+      this.name = ''
+      this.email = ''
+      this.message = ''
+    },
   }
 }
 </script>
 <style scoped>
 section{
-  background-color: #BFBEBE;
+  background-color: #F7F7F7;
 }
- form {
-	width: 100%;
-	margin: 0 auto;
+ .contactForm {
+    width: calc(100% - 20px);
+    max-width: 700px;
+    margin: 0 auto;
 }
- form .field {
-	width: 100%;
-	position: relative;
-	margin-bottom: 30px;
+
+/* STYLES FOR FORM */
+form {
+    width: 100%;
+    display: grid;
+    grid-gap: 30px;
+    padding-top: 20px;
 }
- form .field label {
-	position: absolute;
-	top: 0;
-	left: 0;
-	background: 	#343434;
-	color: white;
-	width: 100%;
-	padding: 12px 0;
-	font-size: 1.25em;
-	letter-spacing: 0.075em;
-	-webkit-transition: all 333ms ease-in-out;
-	-moz-transition: all 333ms ease-in-out;
-	-o-transition: all 333ms ease-in-out;
-	-ms-transition: all 333ms ease-in-out;
-	transition: all 333ms ease-in-out;
+
+.inputGroup {
+    width: 100%;
+    position: relative;
 }
- form .field label + span {
-	opacity: 0;
-	color: white;
-	display: block;
-	position: absolute;
-	top: 12px;
-	left: 7%;
-	font-size: 2.5em;
-	text-shadow: 1px 2px 0 #106A9C;
-	-webkit-transition: all 333ms ease-in-out;
-	-moz-transition: all 333ms ease-in-out;
-	-o-transition: all 333ms ease-in-out;
-	-ms-transition: all 333ms ease-in-out;
-	transition: all 333ms ease-in-out;
+
+  .inputGroup1 {
+      grid-column: 1;
+      grid-row: 1;
+  }
+  .inputGroup2 {
+      grid-column: 2;
+      grid-row: 1;
+  }
+  .inputGroup3 {
+      grid-column: 1;
+      grid-row: 2;
+  }
+  .inputGroup4 {
+      grid-column: 2;
+      grid-row: 2;
+  }
+  .inputGroup5 {
+      grid-column: 1 / span 2;
+      grid-row: 3;
+  }
+  .inputGroup6 {
+      grid-column: 1 / span 2;
+      grid-row: 4;
+  }
+  .inputGroup7 {
+      grid-column: 2;
+      grid-row: 5;
+      text-align: right;
+  }
+
+
+.inputGroup__textfield {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    width: 100%;
+    font-size: 13px;
+    padding: 20px;
+    border: 1px solid #FFF;
+    outline: 0;
+    border-radius: 0;
+    transition: border 0.3s ease-in-out;
+
 }
- form .field input[type="text"], form .field textarea {
-	border: none;
-	background: #e8e9ea;
-	width: 100%;
-	margin: 0;
-	padding: 10px 0;
-	padding-left: 19.5%;
-	color: #313a3d;
-	font-size: 1.4em;
-	letter-spacing: 0.05em;
+  .inputGroup__textfield:focus, .inputGroup__textfield:active {
+      border: 1px solid #D9D9D9;
+  }
+
+
+button {
+    padding: 20px;
+    width: 50%;
+    border: 0;
+    background: #000;
+    cursor: pointer;
+    color: #FFF;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0px 5px 10px 0 rgba(0, 0, 0, 0.1);
 }
- form .field input[type="text"]#msg, form .field textarea#msg {
-	height: 54px;
-	resize: none;
-	-webkit-transition: all 333ms ease-in-out;
-	-moz-transition: all 333ms ease-in-out;
-	-o-transition: all 333ms ease-in-out;
-	-ms-transition: all 333ms ease-in-out;
-	transition: all 333ms ease-in-out;
+
+  button:hover {
+      box-shadow: 0px 10px 30px 0 rgba(0, 0, 0, 0.2);
+  }
+
+
+/* STYLES FOR VALIDATION WARNING */
+.hf-warning {
+    position: absolute !important;
+    top: 0 !important;
+    right: 0 !important;
+    transform: translate(-15%, -50%) !important;
+    background: orangered !important;
+    display: inline-block !important;
+    padding: 7px 14px !important;
+    color: #FFFFFF !important;
+    font-size: 11px !important;
+    font-family: sans-serif;
+    box-shadow: 0px 5px 10px 0 rgba(0, 0, 0, 0.1) !important;
+    border: 0 !important;
+    border-radius: 2px !important;
 }
- form .field input[type="text"]:focus, form .field textarea:focus, form .field input[type="text"].focused, form .field textarea.focused {
-	outline: none;
+
+  .hf-warning:after {
+      content: "";
+      width: 10px;
+      height: 10px;
+      background: orangered;
+      position: absolute;
+      z-index: 1;
+      bottom: -5px;
+      right: 15px;
+      transform: rotate(45deg);
+  }
+
+
+@media screen and (max-width: 480px) {
+    form {
+      display: flex !important;
+      flex-wrap: wrap;
+    }
+
+    form > div {
+      margin-bottom: 30px;
+    }
 }
- form .field input[type="text"]:focus#msg, form .field textarea:focus#msg, form .field input[type="text"].focused#msg, form .field textarea.focused#msg {
-	padding-bottom: 150px;
-}
- form .field input[type="text"]:focus + label, form .field textarea:focus + label, form .field input[type="text"].focused + label, form .field textarea.focused + label {
-	width: 18%;
-	background: #106A9C;
-	color: #313a3d;
-}
- form .field input[type="text"].focused + label, form .field textarea.focused + label {
-	color: #106A9C;
-}
- form .field:hover label {
-	width: 18%;
-	background: #313a3d;
-	color: white;
-}
- form input[type="submit"] {
-	background: #106A9C;
-	color: white;
-	-webkit-appearance: none;
-	border: none;
-	text-transform: uppercase;
-	position: relative;
-	padding: 13px 50px;
-	font-size: 1.4em;
-	letter-spacing: 0.1em;
-	font-family: 'Lato', sans-serif;
-	font-weight: 300;
-	-webkit-transition: all 333ms ease-in-out;
-	-moz-transition: all 333ms ease-in-out;
-	-o-transition: all 333ms ease-in-out;
-	-ms-transition: all 333ms ease-in-out;
-	transition: all 333ms ease-in-out;
-}
- form input[type="submit"]:hover {
-	background: #313a3d;
-	color: #106A9C;
-}
- form input[type="submit"]:focus {
-	outline: none;
-	background: #106A9C;
-}
- 
+
 </style>

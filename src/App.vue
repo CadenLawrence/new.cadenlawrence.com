@@ -1,6 +1,6 @@
 <template>
   <div @scroll="handleScroll" id="app">
-    <nav class="navbar-fixed-top navbar navbar-fixed-top navbar-expand-lg navbar-light bg-light">
+    <nav v-if="this.scrolled==true" class="navbar-fixed-top navbar navbar-fixed-top navbar-expand-lg navbar-light bg-light">
       <div class="col-sm-3 nav-img">
         <!-- <transition
           name="custom-classes-transition"
@@ -46,9 +46,9 @@
           <li class="nav-item">
             <a class="nav-link" href="#projects">Projects</a>
           </li>
-          <li class="nav-item">
+          <!--<li class="nav-item">
             <a class="nav-link" href="#experience">Experience</a>
-          </li>
+          </li>-->
           <li class="nav-item">
             <a class="nav-link" href="#contact">Contact</a>
           </li>
@@ -58,7 +58,7 @@
     <div class="main">
       <About></About>
       <Project></Project>
-      <Experience></Experience>
+      <!--<Experience></Experience>-->
       <Contact></Contact>
     </div>
   </div>
@@ -86,7 +86,7 @@ export default {
   },
   methods: {
     handleScroll() {
-      if (window.scrollY > 40) {
+      if (window.scrollY > 600) {
         return (this.scrolled = true);
       } else {
         return (this.scrolled = false);
@@ -250,7 +250,6 @@ section {
 }
 .main {
   text-align: center;
-  margin-top: 54px;
 }
 
 header {
